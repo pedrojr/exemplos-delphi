@@ -1,0 +1,1 @@
+del /s /q *.exe *.dll *.res *.dcu *.dproj.local *.identcache .stat *.ddp *.bak *.bk* *.~*
