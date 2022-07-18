@@ -16,7 +16,7 @@ type
     function GET(const Command: string): Boolean;
     function POST(const Command: string): Boolean; overload;
     function POST(const Command, Params: string): Boolean; overload;
-    function PUT(const Command: string): Boolean;
+    function PUT(const Command, Params: string): Boolean;
     function DELETE(const Command: string): Boolean;
     
     function GetResponseData: string;
@@ -63,7 +63,7 @@ type
     function GET(const Command: string): Boolean;
     function POST(const Command: string): Boolean; overload;
     function POST(const Command, Params: string): Boolean; overload;
-    function PUT(const Command: string): Boolean;
+    function PUT(const Command, Params: string): Boolean;
     function DELETE(const Command: string): Boolean;
 
     property ResponseData: string read GetResponseData;
@@ -148,9 +148,9 @@ begin
   Result := HttpRequest('POST', Command, Params);
 end;
 
-function TWinHttp.PUT(const Command: string): Boolean;
+function TWinHttp.PUT(const Command, Params: string): Boolean;
 begin
-  Result := HttpRequest('PUT', Command);
+  Result := HttpRequest('PUT', Command, Params);
 end;
 
 function TWinHttp.DELETE(const Command: string): Boolean;
